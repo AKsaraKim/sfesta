@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+html{overflow-y: auto}
+body{font-size:8pt;color:#666;margin:0;padding:0;padding-bottom:30px;}
+#treecontrol{position:fixed; text-align:right;background-color: rgb(19, 42, 103); width: 100%; z-index: 10; height: 36px;}
+#treecontrol:after{display:block; clear:both; height:0px; visibility:hidden; content:".";}
+#treecontrol h1{float: left; font-size:14px; color:#fff; font-weight:bold; padding:10px 2px; margin:0; white-space:nowrap; margin-left: 5px; font-weight: normal}
+#treecontrol a{float: right;display:inline-block;padding:5px;border:1px solid #f3f3f3;border-radius:5px;text-decoration:none;color:#f3f3f3; ; margin:5px 3px 0 0; font-weight: bold;}
+.treeview-red{border-top:1px solid #f57676}
+.jstree li{position:relative;}
+.jstree li a{color:#888}
+.jstree li strong{color:#d70544;}
+.jstree li span{position:absolute;top:0;right:10px;display:inline-block;margin-left:20px;color:#d70544}
+.jstree li em{display:inline-block;color:#000cff;font-style:normal;font-weight:bold;}
+.jstree li.cmp a{color:#000}
+.jstree li.work a{color:#d70544}
+.history{border-bottom: 1px solid #999999; padding-top: 36px; }
+.history table{display: none; width: 100%; background-color: #f9f5f1; }
+.history table tr td:first-child{ width: 80px;}
+.history table tr td:first-child{text-align: center;}
+.history table td{padding: 1px 5px; border-bottom: 1px solid #dddddd}
+.history table tr:last-child td{border-bottom: none; /*padding-bottom: 2px;*/}
+.history table tr:first-child td{border-top: 1px solid #bbbbbb ;/* padding-bottom: 2px;*/}
+.history .title_btn{background-color: #f9f5f1;}
+.history .title_btn:after{display:block; clear:both; height:0px; visibility:hidden; content:".";}
+.history .title_btn span{float: left; font-size:13px; color:#7f766d; font-weight:bold; white-space:nowrap; margin-left: 5px; font-weight: bold; line-height: 23px;}
+.history .title_btn .draft_date{float: none; font-size:11px; color:#7f766d; font-weight:bold; white-space:nowrap; margin-left: 5px; font-weight: normal; line-height: 23px;}
+.history .title_btn a{float: right;display:inline-block;padding:2px;border:1px solid #7f766d;border-radius:5px;text-decoration:none;color:#7f766d; ; margin:3px; font-weight: bold; font-size: 10px;}
+
+.progress{height:20px;margin:5px 15px 20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.1)}.progress-bar{float:left;width:0;height:100%;font-size:14px;line-height:20px;color:#fff;text-align:center;background-color:#428bca;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-transition:width .6s ease;transition:width .6s ease}.progress-striped .progress-bar{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-size:40px 40px}.progress.active .progress-bar{-webkit-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite}.progress-bar-success{background-color:#d9534f}.progress-striped .progress-bar-success{background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent);background-image:linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent)}

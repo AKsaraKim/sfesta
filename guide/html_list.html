@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>PLETA MOBILE WEB HTML LIST</title>
+	<script type="text/javascript" src="resources/js/lib/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/lib/jsTree/jquery.jstree.js"></script>
+	<link rel="stylesheet" href="resources/css/reset.css">
+	<link rel="stylesheet" href="resources/css/html_list.css">
+<style> 
+
+</style>
+</head>
+
+<body class="kr ko-kr">
+
+
+<div id="treecontrol">
+	<h1>S·IT·SM html list</strong></h1>
+	<a href="#" id="c">Close All</a>
+	<a href="#" id="o">Open All</a>
+</div>
+
+<div class="history">
+	<div class="title_btn">
+		<span>History List</span>
+		<a href="#" class="history_toggle">Close / Open</a>		
+	</div>
+	<table class="history_table">
+		<tr>
+			<td>2023-06-26</td>
+			<td><strong>Document Realease</td>
+		</tr>				
+	</table>
+</div>
+
+
+<div id="navigation">
+	<ul>
+		<li><strong>1. 사용자 페이지</strong>
+			<ul>
+				<li class="cmp"><a href="../html/sis100001.html" target="ifrhowl">로그인</a></li>
+				<li class="cmp"><a href="../html/sis100002.html" target="ifrhowl">대시보드</a></li>
+				<li class="cmp"><a href="../html/sis100003.html" target="ifrhowl">게시글상세</a></li>	
+				<li class="cmp"><a href="../html/sis100004.html" target="ifrhowl">게시글입력</a></li>				
+			</ul>
+		</li>
+		<li><strong>2. 관리자 페이지</strong>
+			<ul>
+				<li class="cmp"><a href="../html/sis200001.html" target="ifrhowl">로그인</a></li>
+				<li class="cmp"><a href="../html/sis200002.html" target="ifrhowl">대시보드</a></li>
+				<li class="cmp"><a href="../html/sis200003.html" target="ifrhowl">게시글상세</a></li>	
+				<li class="cmp"><a href="../html/sis200004.html" target="ifrhowl">게시글입력</a></li>					
+			</ul>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$("#navigation").jstree({	
+		"themes" : {"theme" : [ "apple" ]},
+		"plugins" : [ "themes", "html_data" ],
+	}).bind("loaded.jstree", function (event, data) {
+		$(this).jstree("open_all");
+		$('#navigation > ul > li > ul > li').each(function(){
+			var filename = $(this).find('a').attr("href");
+			$(this).append("<span>"+filename+"</span>");
+			$('a',this).attr('title',filename);
+		});
+	}) ;
+
+	var li_count = $('#navigation > ul > li > ul > li').size() - 3;
+	var cmpli_count = $('#navigation > ul > li > ul > li.cmp').size();
+
+	$("#o").click(function(){$('#navigation').jstree('open_all')});
+	$("#c").click(function(){$('#navigation').jstree('close_all')});
+
+	$(".history_toggle").click(function(){$('.history_table').slideToggle()});	
+});
+</script>
+</body>
+</html>

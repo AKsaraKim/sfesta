@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+html,body{padding: 0px;margin: 0px; line-height: 100%; background-color: #eeeeee;height: 100%;}
+	
+.html_list{width: 300px; border-right:1px solid #000000;height:100%; float: left; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
+.control_bar{position: absolute; left: 310px; top:10px; height:60px; width: 90px;}
+.control_bar button{display: block; width:100%; background-color: #fff; margin-bottom: 5px; padding: 6px 10px; color:#333333; font-size: 12px; border: 1px solid #ced4da;
+  border-radius: 4px; line-height: 20px; }
+.control_bar button:hover{background-color: rgb(75, 175, 245);color: #fff; border: 1px solid rgb(40, 120, 245);}
+.html_list iframe{padding: 0px;margin: 0px; width: 100%; height: 100%; border: none; margin-bottom: -2px;}
+.mobile_view{position: absolute; border: 1px solid #000000; top:10px; left:410px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+flex-direction:column;}
+
+.statusbar{background-color: #000; color: #fff; height: 25px;text-align: center; font-size: 11px; line-height: 25px; vertical-align: middle; font-weight: bold;}
+.titlebar{background:#0046ff; color: #fff; height: 40px;text-align: center; font-size: 18px; line-height: 40px; vertical-align: middle; font-weight: bold; padding: 0px;}
+.mobile_view iframe{padding: 0px;margin: 0px; /* overflow-y:scroll */;height: 0;flex-grow:1}	
+.onyxbutton{background-color: #666; color: #aaa; height: 48px;text-align: center; font-size: 18px; line-height: 48px; vertical-align: middle; font-weight: bold; padding: 0px 0px; }
+.navigationbar{background-color: #000; color: #666; height: 39px; bottom: 0px; text-align: center; font-size: 11px; line-height: 39px; vertical-align: middle; }
+
+.navigationbar_l{display: none;}
+
+.keyboard{display: none; height: 192px;background-color: #333; color: #999; text-align: center; font-size: 18px; line-height: 192px; vertical-align: middle; font-weight: bold; padding: 0px 0px;}
+.case1{width: 320px; height: 568px;}
+.case1 .navigationbar{display: none;}		
+.case1 .onyxbutton{display: none;}
+.case1 .statusbar{height: 20px; line-height: 20px; background-color: #fff; color: #000  }
+.case1 .statusbar:before{content: 'iPhone5 ';}
+
+.case2{width: 375px; height: 667px;}		
+.case2 .navigationbar{display: none;}
+.case2 .onyxbutton{display: none;}
+.case2 .statusbar{height: 20px; line-height: 20px;  background-color: #fff; color: #000}
+.case2 .statusbar:before{content: 'iPhone6 ';}
+
+.case3{width: 360px; height: 640px;}		
+.case3 .statusbar:before{content: 'android ';}
+
+.case4{width: 377px; height: 640px;}			
+.case4 .statusbar:before{content: 'android ';}
+
+.case5{width: 640px; height: 320px;}		
+.case5 .titlebar{height: 40px; line-height: 40px;}
+.case5 .navigationbar{display: none;}
+.case5 .navigationbar_l{background-color: #000; color: #666; width: 28px; bottom: 0px; text-align: center; font-size: 11px; vertical-align: middle; }
+.case5 .statusbar:before{content: 'android ';}
+
+.case6{width: 640px; height: 360px;}
+.case6 .titlebar{height: 40px; line-height: 40px;}
+.case6 .navigationbar{display: none;}
+.case6 .navigationbar_l{background-color: #000; color: #666; width: 28px; bottom: 0px; text-align: center; font-size: 11px; vertical-align: middle; }
+.case6 .statusbar:before{content: 'android ';}
+
+.case7{width: 960px; height: 600px;}		
+.case7 .statusbar:before{content: 'android ';}
+
+.case8{width: 600px; height: 960px;}
+.case8 .statusbar:before{content: 'android ';}
+
+.case9{top:0px; right:0px ; bottom:0px; border:0; border-left: 1px solid #ddd;}
+.case9 .statusbar{display: none;}
+.case9 .navigationbar{display: none;}
+.case9 .titlebar{display: none;}
+.case9 .onyxbutton{display: none;}
+.case9 .keyboard{display: none;}	
+.case9 .statusbar:before{content: 'PC ';}

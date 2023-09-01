@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="resources/css/reset.css">
+	<link rel="stylesheet" href="resources/css/list.css">
+<style type="text/css">
+	
+</style>
+<script type="text/javascript" src="resources/js/lib/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	for (var i=1; i<=10; i++) {
+		(function(){
+			var id = i;
+			$(".mv_case" + id).click(function(){
+				$(".mobile_view").removeClass().addClass("mobile_view");	
+				$(".mobile_view").addClass("case"+ id);		
+			});		
+		})();	
+	}
+	$(".toggle_title").click(function(){
+		$(".titlebar").slideToggle("fast");
+	});
+	$(".toggle_onyx").click(function(){
+		$(".onyxbutton").slideToggle("fast");
+	});
+	$(".toggle_nav_bar").click(function(){
+		$(".navigationbar").slideToggle("fast");
+	});
+	$(".toggle_keboard").click(function(){
+		$(".keyboard").slideToggle("fast");
+	});
+});
+</script>
+<title>S·IT·SM WEB HTML LIST</title>
+</head>
+<body>
+	<div class="html_list">
+		<iframe src="html_list.html" scrolling="auto" frameborder="0"></iframe>
+	</div>	
+	<div class="control_bar">
+		<button class="mv_case1">320x568 (iphone5)</button>
+		<button class="mv_case2">375x667 (iphone6)</button>
+		<button class="mv_case3">360x640 (noscroll)</button>
+		<button class="mv_case4">377x640 (scrolled)</button>
+		<button class="mv_case5">640x320 (landscape)</button>
+		<button class="mv_case6">640x360 (landscape)</button>
+		<button class="mv_case7">960x600 (tablet)</button>
+		<button class="mv_case8">600x960 (tablet)</button>
+		<button class="mv_case9">PC-fullsize</button>
+		<hr />
+		<button class="toggle_nav_bar">toggle Nav Bar</button>
+		<button class="toggle_title">toggle title bar</button>
+		<button class="toggle_onyx">toggle ONYX Button</button>
+		<button class="toggle_keboard">toggle keyboard show</button>		
+	</div>
+	<div class="mobile_view_box">
+		<div class="navigationbar_l">
+			Nav Bar
+		</div>
+		<div class="mobile_view case9">
+			<div class="statusbar">Status Bar</div>
+			<div class="titlebar">Title Bar</div>
+			<iframe id="ifrhowl" name="ifrhowl" frameborder="0" src="../html/sis100001.html" scrolling="yes"></iframe>
+			<div class="onyxbutton">ONYX Button</div>
+			<div class="keyboard">Keyboard</div>
+			<div class="navigationbar">Navigation Bar</div>
+		</div>
+	</div>	
+</body>
+</html>
