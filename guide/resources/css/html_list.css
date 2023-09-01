@@ -2,7 +2,7 @@
 
 html{overflow-y: auto}
 body{font-size:8pt;color:#666;margin:0;padding:0;padding-bottom:30px;}
-#treecontrol{position:fixed; text-align:right;background-color: rgb(19, 42, 103); width: 100%; z-index: 10; height: 36px;}
+#treecontrol{position:fixed; text-align:right;background-color: rgb(103, 85, 45); width: 100%; z-index: 10; height: 36px;}
 #treecontrol:after{display:block; clear:both; height:0px; visibility:hidden; content:".";}
 #treecontrol h1{float: left; font-size:14px; color:#fff; font-weight:bold; padding:10px 2px; margin:0; white-space:nowrap; margin-left: 5px; font-weight: normal}
 #treecontrol a{float: right;display:inline-block;padding:5px;border:1px solid #f3f3f3;border-radius:5px;text-decoration:none;color:#f3f3f3; ; margin:5px 3px 0 0; font-weight: bold;}

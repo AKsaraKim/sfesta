@@ -2,13 +2,13 @@
 
 html,body{padding: 0px;margin: 0px; line-height: 100%; background-color: #eeeeee;height: 100%;}
 	
-.html_list{width: 300px; border-right:1px solid #000000;height:100%; float: left; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
-.control_bar{position: absolute; left: 310px; top:10px; height:60px; width: 90px;}
+.html_list{width: 400px; border-right:1px solid #000000;height:100%; float: left; box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
+.control_bar{position: absolute; left: 410px; top:10px; height:60px; width: 90px;}
 .control_bar button{display: block; width:100%; background-color: #fff; margin-bottom: 5px; padding: 6px 10px; color:#333333; font-size: 12px; border: 1px solid #ced4da;
   border-radius: 4px; line-height: 20px; }
 .control_bar button:hover{background-color: rgb(75, 175, 245);color: #fff; border: 1px solid rgb(40, 120, 245);}
 .html_list iframe{padding: 0px;margin: 0px; width: 100%; height: 100%; border: none; margin-bottom: -2px;}
-.mobile_view{position: absolute; border: 1px solid #000000; top:10px; left:410px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
+.mobile_view{position: absolute; border: 1px solid #000000; top:10px; left:510px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;
 flex-direction:column;}
 
 .statusbar{background-color: #000; color: #fff; height: 25px;text-align: center; font-size: 11px; line-height: 25px; vertical-align: middle; font-weight: bold;}
