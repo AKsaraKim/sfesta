@@ -121,6 +121,14 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
     border-radius: 4px; margin-left: 4px; height: auto; vertical-align: middle; padding: 1px 5px; margin-top:-16px;}
 .per_ico .dealer{border: 1px solid #5e66ff; color: #5e66ff;}
 
+table.sft{border: 1px solid rgba(255,255,255,0.7); font-size: 14px; width: 100%;font-family: OneShinhanl; }
+table.sft th{border-bottom: 1px solid rgba(255,255,255,0.7);border-left: 1px solid rgba(255,255,255,0.7); font-weight: normal; background-color: rgba(255,255,255,0.1); text-align: center;}
+table.sft thead tr th:first-child{border-left: 0}
+table.sft tbody tr:first-child td{border-top:0;}
+table.sft td{border-top: 1px solid rgba(255,255,255,0.4); border-left: 1px solid rgba(255,255,255,0.4); text-align: center;}
+table.sft tbody tr td:first-child{border-left: 0;}
+table.sft .cnt_num{text-align: right; padding:0 4px}
+
 /* layout */
 
 .navbar{position: absolute; width: calc(100% - 80px); left: 80px; top:0px; height: 40px;
@@ -247,6 +255,21 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 .mem_lst .on_playing{background-color: #be2900; color: #fff; border-radius: 30px; padding:8px; text-align: center; margin-bottom: 12px;;}
 .mem_lst .mem_card{align-items: center;}
 .mem_lst > ul{display: flex; gap: 8px; flex-direction: column;}
+
+.hsr_all{color: #fff; padding:12px;}
+.hsr_all > ul > li{margin-top:12px;}
+.hsr_all > ul > li:first-child{margin-top:0;}
+.hsr_all > ul > li > .tit{font-size: 16px; margin-bottom:8px;}
+
+.mem_name{margin-bottom: 8px;}
+.mem_rst{border: 1px solid #fff; padding: 8px; border: 1px solid rgba(255,255,255,0.4);border-radius: 8px;;}
+.now_pns{font-size: 0; text-align: right; margin-top:8px;}
+.now_pns .tit{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 18px; font-family: OneShinhanB; margin-right: 4px;}
+.now_pns .smb{display: inline-block; vertical-align: middle; width: 30px; height: 30px; text-indent: -9999px; background-image: url('../images/coin.png'); background-size: cover;}
+.now_pns .crs{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 14px; margin: 0 4px;}
+.now_pns .cnt{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 22px; font-family: OneShinhanB;}
+
+
 
 
 
