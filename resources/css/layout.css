@@ -33,6 +33,13 @@ input[type='password']{-webkit-appearance: none; display: inline-block; width: 1
 button{font-family: OneShinhanM; border-radius: 4px; transition: 0.3s all; word-break: keep-all;}
 button.bsc{border: 1px solid #003fe7; color: #fff; display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgba(0,18,67,1); background: linear-gradient(180deg, rgba(0,49,176,1) 0%, rgba(0,18,67,1) 100%);}
 button.bsc:hover{background: rgba(0,11,41,1); background: linear-gradient(180deg, rgba(0,42,149,1) 0%, rgba(0,11,41,1) 100%);}
+button.bsc_w{border: 1px solid rgba(0,49,176,1); color: rgba(0,49,176,1); display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
+button.bsc_w:hover{background: rgba(227,235,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,235,255,1) 100%);}
+button.bsc > .tit{display: block; font-size: 18px;}
+button.bsc > .sub{display: block; font-size: 14px;}
+button.bsc_r{border: 1px solid #be2900; color: #fff; display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgb(228,30,0);   background: linear-gradient(180deg, rgba(228,30,0,1) 0%, rgba(117,37,0,1) 100%);}
+button.bsc_r:hover{background: rgb(200,26,0); background: linear-gradient(180deg, rgba(200,26,0,1) 0%, rgba(75,24,0,1) 100%);}
+
 
 .login_box .bsc_gld{margin-top:4px; padding:16px 8px;}
 .login_box .bsc_wht{margin-top:4px; padding:16px 8px;}
@@ -59,6 +66,13 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 .btn_box{display: flex; gap: 8px;}
 .btn_box.dual_imp button:first-child{flex: 1;}
 .btn_box.dual_imp button:nth-child(2){flex: 3;}
+.btn_box_s{display: flex; gap: 4px;}
+.btn_box_s .tit{display: block; font-size: 16px;}
+.btn_box_s .sub{display: block; font-size: 12px;}
+.btn_box_s button.bsc .tit{display: block; font-size: 16px;}
+.btn_box_s button.bsc .sub{display: block; font-size: 12px;}
+
+
 
 .ipt_chk > input[type='checkbox'] + p{display: flex;}
 .ipt_chk > input[type='checkbox']{display: none;}
@@ -103,6 +117,10 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 .auth_ipt{position: relative;}
 .auth_ipt .auth_time{position: absolute; right: 16px; color: #be2900; font-size: 12px; line-height: 16px; top:50%; margin-top: -8px;}
 
+.per_ico{font-family: OneShinhanB; font-size: 10px; border: 1px solid #5e66ff; color: #5e66ff; display: inline-block;
+    border-radius: 4px; margin-left: 4px; height: auto; vertical-align: middle; padding: 1px 5px; margin-top:-16px;}
+.per_ico .dealer{border: 1px solid #5e66ff; color: #5e66ff;}
+
 /* layout */
 
 .navbar{position: absolute; width: calc(100% - 80px); left: 80px; top:0px; height: 40px;
@@ -115,8 +133,25 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 
 .brand-link label{display: block; text-align: center; font-family: OneShinhanB; color: #fff;}
 
+.main_bar{flex:0; background-color: #fff; padding:8px; display: flex;  gap: 8px; flex-direction: column;}
+.main_bar .main_logo{display: inline-block; font-family: OneShinhanB; color: #003fe7; font-size: 18px; line-height: 27px;;}
+
+.per_info{font-size: 0; display: flex; justify-content: space-between;}
+.per_info .name_box{}
+.per_info .num{font-size: 14px; align-self: flex-end;}
+.per_info .name{font-size: 18px; align-self: flex-end;}
+
+
 
 /* dashboard */
+
+.dashboard_dlr{display: flex; flex-direction: column; height: 100%;}
+
+.dlr_fnc{flex:1; padding:20px;}
+.dlr_fnc > .btn_box{flex-wrap: wrap; margin: 0 auto; max-width: 640px;}
+.dlr_fnc > .btn_box > button{width: calc(50% - 4px); height: calc(50% - 4px); aspect-ratio: auto 1/1; line-height: 26px;}
+.dlr_fnc > .btn_box > button > .tit{font-size: 20px; display: block;}
+.dlr_fnc > .btn_box > button > .sub{font-size: 16px;}
 
 .dashboard_wrap{display: flex; gap:8px; margin: 0 0 16px -28px; padding: 0 28px 28px; border-bottom: 1px solid #cccccc;}
 .dashboard_wrap .item{flex:1; border: 1px solid #999999; background-color: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 3px 5px rgba(0,0,0,.1);}
@@ -142,7 +177,77 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 
 /* greeting */
 
-.greeting{color: #fff;}
+.greeting{color: #fff; text-align: center; padding: 32px 8px 32px 8px;}
+.greeting > img{width: 60%;}
+.greeting .user{font-size: 16px; font-family: OneShinhanL}
+.greeting .user .name{font-family: OneShinhanB}
+.greeting .user .num{font-size: 12px;}
+
+.sum_pnt{position: relative; color: #fff; text-align: center; padding: 32px 8px 32px 8px;}
+.sum_pnt::before{content: ''; display: block; position: absolute; width: 10px; left: 50%; top:0; margin-left: -5px; height: 1px; background-color: rgba(255,255,255,0.4)}
+.pnt_box{display: flex;}
+.pnt_box .pnts{font-size: 0px; line-height: 60px;}
+.pnt_box .pnts .mlt{display: inline-block; font-size: 20px; line-height: 60px; vertical-align: middle; padding: 0 12px;}
+.pnt_box .pnts .num{display: inline-block; font-size: 50px; line-height: 60px; vertical-align: middle;}
+.pnt_box::before{content: ''; display: block; flex: 1;}
+.pnt_box::after{content: ''; display: block; flex: 1;}
+.img_coin{width: 60px; height: 60px;}
+
+.lst_pnt{position: relative; color: #fff; text-align: center; padding: 32px 8px 32px 8px;}
+.lst_pnt::before{content: ''; display: block; position: absolute; width: 10px; left: 50%; top:0; margin-left: -5px; height: 1px; background-color: rgba(255,255,255,0.4);}
+.lst_pnt > ul{font-size: 0; text-align: center;}
+.lst_pnt > ul > li{display: inline-block; margin:4px;}
+.lst_pnt .point{position: relative; width: 140px; height: 140px; background-image: url('../images/coin_emt.png'); background-size: cover;}
+.lst_pnt .point > .num{position: absolute; display: block; font-family: OneShinhanB; font-size: 35px; line-height: 40px; top:50%; margin-top: -20px; width: 100%; left: 0;
+    color: #FEE884; text-shadow: 0px 3px 6px rgba(0,0,0,0.5);}
+.lst_pnt .point > .done{position: absolute; top:0; left: 0; display: block; width: 100%; height: 100%; border-radius: 100%; backdrop-filter: grayscale(100%) blur(2px); border:8px solid #be2900; color:#be2900}
+.lst_pnt .point > .done > span{position: absolute; display: block; font-family: OneShinhanB; font-size: 26px; line-height: 40px; top:50%; margin-top: -20px; width: 100%; left: 0; transform: rotate(-30deg)}
+
+.ntc_box{color: #fff; margin: 20px auto; padding: 16px;}
+.ntc_inr{border: 1px solid rgba(255,255,255,0.4); background-color: rgba(255,255,255,0.1); padding: 16px; max-width: 400px; border-radius: 8px; margin: 0px auto;}
+.ntc_inr p{margin-bottom: 8px;}
+.ntc_inr > ul > li{font-family: OneShinhanL; position: relative; font-size: 14px; line-height: 22px; padding-left: 8px;}
+.ntc_inr > ul > li::before{content: ''; position: absolute; display: block; width: 2px; height: 2px; top:50%; margin-top:-1px; left: 2px; background-color: rgba(255,255,255,0.4);}
+
+.ft_ci{text-align: center; padding: 10px 0 50px; flex: 0;}
+.ft_ci > span{display: inline-block;  text-indent: -9999px; background-image: url('../images/logo_w.png'); background-size: cover; width: 144px; height: 29px; opacity: 0.4;}
+
+.ft_bt{position: fixed; width: 100%; bottom: 0; left: 0; padding:12px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
+.ft_bt > .btn_box > button{line-height: 26px;}
+.ft_bt > .btn_box > button > .tit{display: block; font-size: 20px;}
+.ft_bt > .btn_box > button > .sub{font-size: 16px;}
+
+.ft_ept{padding-top: 100px;}
+
+
+
+/* content */
+
+.sch_box{color: #fff; padding:12px;}
+.sch_box > .tit{font-size: 16px; margin-bottom:8px;}
+.sch_lin{display: flex; gap: 8px; margin-bottom:8px;}
+.sch_lin > input{flex: 1;}
+.sch_lin > button{width: 100px;}
+.mem_card{border: 1px solid #fff; color: #111; padding: 8px; display: flex; justify-content: space-between; border-radius: 8px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%); box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);}
+.mem_card .count{font-size: 18px; font-family: OneShinhanB;}
+.mem_card .info .name{font-size: 18px; display: block; font-family: OneShinhanB;}
+.mem_card .info .num{font-size: 14px;}
+.mem_card .pnts{width: 100px; font-size: 0; text-align: center;}
+.mem_card .pnts .smb{display: inline-block; vertical-align: middle; width: 40px; height: 40px; text-indent: -9999px; background-image: url('../images/coin.png'); background-size: cover;}
+.mem_card .pnts .crs{display: inline-block; line-height: 40px; vertical-align: middle; font-size: 14px; margin: 0 4px;}
+.mem_card .pnts .cnt{display: inline-block; line-height: 40px; vertical-align: middle; font-size: 22px; font-family: OneShinhanB;}
+.no_rst{border: 1px solid #fff; padding: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.4); background-color: rgba(255,255,255,0.1); border-radius: 8px;;}
+
+.game_room{color: #fff; padding:12px; border-top:1px solid rgba(255,255,255,0.4)}
+.game_room > .tit{font-size: 16px; margin-bottom:8px;}
+.game_room > ul{display: flex; flex-wrap: wrap; gap: 8px;}
+.game_room > ul > li{width: calc(50% - 4px);}
+
+.mem_lst{color: #fff; padding:12px;}
+.mem_lst .on_playing{background-color: #be2900; color: #fff; border-radius: 30px; padding:8px; text-align: center; margin-bottom: 12px;;}
+.mem_lst .mem_card{align-items: center;}
+.mem_lst > ul{display: flex; gap: 8px; flex-direction: column;}
+
 
 
 
