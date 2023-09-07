@@ -140,6 +140,12 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 
 
 
+/* greeting */
+
+.greeting{color: #fff;}
+
+
+
 /* popup */
 
 .popup{z-index: 100; position: fixed; display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; top:0; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,.4); backdrop-filter: blur(4px); }
