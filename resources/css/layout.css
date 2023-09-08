@@ -309,3 +309,33 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 /* txt_img */
 .txt_img{display: inline-block; width: 46px; height: 46px; line-height: 46px; color: #fff;  border-radius: 100%; font-size: 30px; font-family: OneShinhanB;  background: radial-gradient(circle, rgba(0,49,176,1) 0%, rgba(0,18,67,1) 100%);}
+
+
+
+/* slot machine */
+
+.slotm{position: relative; width: 100%; height: 100%; background-color: #fff; display: flex; flex-direction: column; }
+.slotm::before{content: ''; display: block; flex: 1;}
+.slotm::after{content: ''; display: block; flex: 1;}
+.slot_box{width: 70%; margin: 0 auto;}
+
+.slot_test{position: absolute; width: 300px; display: flex; bottom: 10px; left: 50%; margin-left: -150px;}
+
+.slotwrapper {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    height: 200px;
+}
+.slotwrapper ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    float: left;
+    width: 25%;
+    height:200px;
+    font-size: 200px;
+    line-height: 200px;
+    text-align: center;
+}
