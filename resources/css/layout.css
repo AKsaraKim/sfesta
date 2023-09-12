@@ -74,7 +74,7 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 
 .login_wrap{padding: 20px; display: flex; flex-direction: column; z-index: 10; justify-content: space-between; z-index: 10; max-width: 960px;}
 .login_wrap > h2{font-size: 22px; color: #ffffff; font-family: OneShinhanM; margin-bottom: 12px; line-height: 28px; text-indent: -9999px;
-        background-image: url('../images/logo_w.png'); background-size: cover; width: 144px; height: 29px;
+        background-image: url('../images/logo_w.png'); background-size: cover; width: 96px; height: 19px;
 }
 .login_wrap > img{width: 100%;}
 
@@ -87,8 +87,10 @@ button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-
 .login_box > ul > li{margin-bottom: 4px;}
 
 .login_box button.bsc{padding:15px;}
-.login_box input[type='text']{padding:12px 8px;}
-.login_box input[type='password']{padding:12px 8px;}
+.login_box input[type='text']{padding:12px 8px; background-color: rgba(0,0,0,0.2); border: 1px solid #fff; border-radius: 4px; color: #fff; backdrop-filter: blur(1px);}
+.login_box input[type='text']::placeholder{color: rgba(255,255,255,0.6);}
+.login_box input[type='password']{padding:12px 8px; background-color: rgba(0,0,0,0.2); border: 1px solid #fff; border-radius: 4px; color: #fff; backdrop-filter: blur(1px);}
+.login_box input[type='password']::placeholder{color: rgba(255,255,255,0.6);}
 
 .mem_info{color: #fff; border: 1px solid rgba(255,255,255,0.4); padding: 8px; border-radius: 8px;}
 .mem_info .noti{font-size: 12px; text-align: center;}
@@ -137,7 +139,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 /* dashboard */
 
-.dashboard_dlr{display: flex; flex-direction: column; height: 100%;}
+.dashboard_dlr{display: flex; flex-direction: column; height: 100%; position: relative;}
 
 .dlr_fnc{flex:1; padding:20px;}
 .dlr_fnc > .btn_box{flex-wrap: wrap; margin: 0 auto; max-width: 640px;}
@@ -197,6 +199,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 .sum_pnt{position: relative; color: #fff; text-align: center; padding: 32px 8px 32px 8px;}
 .sum_pnt::before{content: ''; display: block; position: absolute; width: 10px; left: 50%; top:0; margin-left: -5px; height: 1px; background-color: rgba(255,255,255,0.4)}
+.sum_pnt > p{margin-bottom: 12px;}
 .pnt_box{display: flex;}
 .pnt_box .pnts{font-size: 0px; line-height: 60px;}
 .pnt_box .pnts .mlt{display: inline-block; font-size: 20px; line-height: 60px; vertical-align: middle; padding: 0 12px;}
@@ -207,6 +210,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 .lst_pnt{position: relative; color: #fff; text-align: center; padding: 32px 8px 32px 8px;}
 .lst_pnt::before{content: ''; display: block; position: absolute; width: 10px; left: 50%; top:0; margin-left: -5px; height: 1px; background-color: rgba(255,255,255,0.4);}
+.lst_pnt > p{margin-bottom: 12px;}
 .lst_pnt > ul{font-size: 0; text-align: center;}
 .lst_pnt > ul > li{display: inline-block; margin:4px;}
 .lst_pnt .point{position: relative; width: 140px; height: 140px; background-image: url('../images/coin_emt.png'); background-size: cover;}
@@ -222,7 +226,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 .ntc_inr > ul > li::before{content: ''; position: absolute; display: block; width: 2px; height: 2px; top:50%; margin-top:-1px; left: 2px; background-color: rgba(255,255,255,0.4);}
 
 .ft_ci{text-align: center; padding: 10px 0 50px; flex: 0;}
-.ft_ci > span{display: inline-block;  text-indent: -9999px; background-image: url('../images/logo_w.png'); background-size: cover; width: 144px; height: 29px; opacity: 0.4;}
+.ft_ci > span{display: inline-block;  text-indent: -9999px; background-image: url('../images/logo_w.png'); background-size: cover; width: 96px; height: 19px; opacity: 0.4;}
 
 .ft_bt{position: fixed; width: 100%; bottom: 0; left: 0; padding:12px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
 .ft_bt > .btn_box > button{line-height: 26px;}
@@ -314,7 +318,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 /* slot machine */
 
-.slotm{position: relative; width: 100%; height: 100%; background-color: #fff; display: flex; flex-direction: column; }
+.slotm{position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; }
 .slotm::before{content: ''; display: block; flex: 1;}
 .slotm::after{content: ''; display: block; flex: 1;}
 .slot_box{width: 70%; margin: 0 auto;}
@@ -339,3 +343,8 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     line-height: 200px;
     text-align: center;
 }
+
+/* bg */
+
+.bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; z-index: 0;}
+.golddust_cvs{pointer-events:none;}
