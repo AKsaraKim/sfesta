@@ -42,6 +42,14 @@ button.bsc_wht:hover{border: 1px solid rgba(0,49,176,1); color: rgba(0,49,176,1)
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);
 }
 
+button.bsc_gld_ani{border: 1px solid #AA771C; color: #e3d8bf; display: inline-block; width: 100%; font-size: 18px; line-height: 20px; padding: 8px; box-shadow: 0 7px 14px rgba(0,0,0,.12),0 5px 5px rgba(0,0,0,.11); background: rgb(191,149,63);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);}
+
+button.bsc_gld_ani:hover{border: 1px solid #FCF6BA; color: #fff; box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22); background: rgb(191,149,63);
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 4%, #D1B464 20%, #433413 50.5%, #5d4a1f 100%);}
+
 button.btn_menu{background-color: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 3px 5px rgba(0,0,0,.1);}
 
 .btn_box{display: flex; gap: 8px;}
@@ -130,7 +138,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 .main_bar{flex:0; background-color: #fff; padding:8px; display: flex;  gap: 8px; flex-direction: column;}
 .main_bar .main_logo{display: inline-block; font-family: OneShinhanB; color: #003fe7; font-size: 18px; line-height: 27px;;}
 
-.per_info{font-size: 0; display: flex; justify-content: space-between;}
+.per_info{font-size: 0; display: flex; justify-content: space-between; gap: 8px;}
 .per_info .name_box{}
 .per_info .num{font-size: 14px; align-self: flex-end;}
 .per_info .name{font-size: 18px; align-self: flex-end;}
@@ -348,3 +356,13 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 .bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; z-index: 0;}
 .golddust_cvs{pointer-events:none;}
+
+
+/* PC & tablet size */
+
+@media (min-width: 768px) {
+    .main_bar{flex-direction: row; justify-content: space-between;}
+    .per_info{align-items: center;}
+    .sch_box{max-width: 50%;}
+    .game_room{position: absolute; top: 53px; left: 50%; height: calc(100% - 148px); border-left: 1px solid rgba(255,255,255,0.4); overflow-y: auto;}
+}
