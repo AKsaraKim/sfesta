@@ -14,12 +14,16 @@ input[type='password']{-webkit-appearance: none; display: inline-block; width: 1
 button{font-family: OneShinhanM; border-radius: 4px; transition: 0.3s all; word-break: keep-all;}
 button.bsc{border: 1px solid #003fe7; color: #fff; display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgba(0,18,67,1); background: linear-gradient(180deg, rgba(0,49,176,1) 0%, rgba(0,18,67,1) 100%);}
 button.bsc:hover{background: rgba(0,11,41,1); background: linear-gradient(180deg, rgba(0,42,149,1) 0%, rgba(0,11,41,1) 100%);}
-button.bsc_w{border: 1px solid rgba(0,49,176,1); color: rgba(0,49,176,1); display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
-button.bsc_w:hover{background: rgba(227,235,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,235,255,1) 100%);}
 button.bsc > .tit{display: block; font-size: 18px;}
 button.bsc > .sub{display: block; font-size: 14px;}
+button.bsc_w{border: 1px solid rgba(0,49,176,1); color: rgba(0,49,176,1); display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
+button.bsc_w:hover{background: rgba(227,235,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(227,235,255,1) 100%);}
+button.bsc_w > .tit{display: block; font-size: 18px;}
+button.bsc_w > .sub{display: block; font-size: 14px;}
 button.bsc_r{border: 1px solid #be2900; color: #fff; display: inline-block; width: 100%; font-size: 16px; line-height: 20px; padding: 8px; background: rgb(228,30,0);   background: linear-gradient(180deg, rgba(228,30,0,1) 0%, rgba(117,37,0,1) 100%);}
 button.bsc_r:hover{background: rgb(200,26,0); background: linear-gradient(180deg, rgba(200,26,0,1) 0%, rgba(75,24,0,1) 100%);}
+button.bsc_r > .tit{display: block; font-size: 18px;}
+button.bsc_r > .sub{display: block; font-size: 14px;}
 
 
 .login_box .bsc_gld{margin-top:4px; padding:16px 8px;}
@@ -162,17 +166,19 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 .adm_fnc > .btn_box > button > .tit{font-size: 20px; display: block; line-height: 24px;} 
 .adm_fnc > .btn_box > button > .sub{font-size: 14px; display: block; line-height: 20px;}
 
-.mdf_pns{display: flex; justify-content: space-between; padding: 8px;}
-.mdf_pns > .pns_btn{display: flex; gap: 8px;}
-.mdf_pns > .pns_btn button.bsc{padding: 4px;}
+.mdf_pns{padding: 8px; background-color: rgba(0,0,0,0.4); border: 1px solid #fff; backdrop-filter: blur(1px); margin-top:8px; border-radius: 8px;}
+.mdf_pns > .pns_btn{display: flex; gap: 8px; justify-content: center; margin-top: 8px;}
+.mdf_pns > .pns_btn button.bsc_w{padding: 4px; max-width: 160px;}
+.mdf_pns > .pns_btn button.bsc_w > .sub{font-size: 12px;}
+.mdf_pns > .pns_btn button.bsc{padding: 4px; max-width: 160px;}
 .mdf_pns > .pns_btn button.bsc > .sub{font-size: 12px;}
-.mdf_pns > .pns_btn button.bsc_r{padding: 4px;}
+.mdf_pns > .pns_btn button.bsc_r{padding: 4px; max-width: 160px;}
 .mdf_pns > .pns_btn button.bsc_r > .sub{font-size: 12px;}
-.mdf_pns > .pns_rst{font-size: 0; text-align: right; margin-top:8px;}
-.mdf_pns > .pns_rst .tit{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 18px; font-family: OneShinhanB; margin-right: 4px; letter-spacing: -1px;}
+.mdf_pns > .pns_rst{font-size: 0; text-align: center; margin:16px 0;}
+.mdf_pns > .pns_rst .tit{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 22px; font-family: OneShinhanB; margin-right: 4px; letter-spacing: -1px;}
 .mdf_pns > .pns_rst .smb{display: inline-block; vertical-align: middle; width: 30px; height: 30px; text-indent: -9999px; background-image: url('../images/coin.png'); background-size: cover;}
-.mdf_pns > .pns_rst .crs{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 14px; margin: 0 4px;}
-.mdf_pns > .pns_rst .cnt{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 22px; font-family: OneShinhanB;}
+.mdf_pns > .pns_rst .crs{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 18px; margin: 0 4px;}
+.mdf_pns > .pns_rst .cnt{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 28px; font-family: OneShinhanB;}
 
 
 .dashboard_wrap{display: flex; gap:8px; margin: 0 0 16px -28px; padding: 0 28px 28px; border-bottom: 1px solid #cccccc;}
@@ -237,7 +243,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 .ft_ci > span{display: inline-block;  text-indent: -9999px; background-image: url('../images/logo_w.png'); background-size: cover; width: 96px; height: 19px; opacity: 0.4;}
 
 .ft_bt{position: fixed; width: 100%; bottom: 0; left: 0; padding:12px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
-.ft_bt > .btn_box > button{line-height: 26px;}
+.ft_bt > .btn_box > button{line-height: 26px; max-width: 640px; margin: 0 auto;}
 .ft_bt > .btn_box > button > .tit{display: block; font-size: 20px;}
 .ft_bt > .btn_box > button > .sub{font-size: 16px;}
 
@@ -249,6 +255,8 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 .sch_box{color: #fff; padding:12px;}
 .sch_box > .tit{font-size: 16px; margin-bottom:8px;}
+.sch_box_dep{color: #fff; padding:12px;}
+.sch_box_dep > .tit{font-size: 16px; margin-bottom:8px;}
 .sch_lin{display: flex; gap: 8px; margin-bottom:8px;}
 .sch_lin > input{flex: 1;}
 .sch_lin > button{width: 100px;}
@@ -289,14 +297,14 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 .mem_name{margin-bottom: 8px;}
 .mem_rst{border: 1px solid #fff; padding: 8px; border: 1px solid rgba(255,255,255,0.4);border-radius: 8px;;}
-.now_pns{font-size: 0; text-align: right; margin-top:8px;}
+.now_pns{font-size: 0; text-align: center; margin-top:8px;}
 .now_pns .tit{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 18px; font-family: OneShinhanB; margin-right: 4px;}
 .now_pns .smb{display: inline-block; vertical-align: middle; width: 30px; height: 30px; text-indent: -9999px; background-image: url('../images/coin.png'); background-size: cover;}
 .now_pns .crs{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 14px; margin: 0 4px;}
 .now_pns .cnt{display: inline-block; line-height: 30px; vertical-align: middle; font-size: 22px; font-family: OneShinhanB;}
 
 
-.pnt_all{padding:12px;}
+.pnt_all{padding:12px; width: 100%; max-width: 1080px; margin: 0 auto;}
 .pnt_all table.sft{color: #fff;}
 .pnt_all .btn_box{margin-bottom: 8px;}
 .pnt_all .pnt_num{display: inline-block; border: 1px solid rgba(255,255,255,0.3); font-size: 12px; padding:0px 4px; border-radius: 8px; margin:1px}
@@ -352,6 +360,8 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     text-align: center;
 }
 
+.slotwrapper li {color: #fff;}
+
 /* bg */
 
 .bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; z-index: 0;}
@@ -363,6 +373,11 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 @media (min-width: 768px) {
     .main_bar{flex-direction: row; justify-content: space-between;}
     .per_info{align-items: center;}
-    .sch_box{max-width: 50%;}
-    .game_room{position: absolute; top: 53px; left: 50%; height: calc(100% - 148px); border-left: 1px solid rgba(255,255,255,0.4); overflow-y: auto;}
+    .sch_box{width: 768px; margin: 0 auto;}
+    .sch_box_dep{position: absolute; width: 50%; max-width: 640px; top: 53px; right: 50%; height: calc(100% - 148px); overflow-y: auto;}
+    .game_room{position: absolute; width: 50%; max-width: 640px; top: 53px; left: 50%; height: calc(100% - 148px); border-left: 1px solid rgba(255,255,255,0.4); overflow-y: auto;}
+    .mem_lst{width: 720px; margin: 0 auto;}
+    .hsr_all{width: 768px; margin: 0 auto;}
+    .mdf_pns > .pns_btn button.bsc{padding:12px;}
+    .mdf_pns > .pns_btn button.bsc_r{padding:12px;}
 }
