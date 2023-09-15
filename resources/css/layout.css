@@ -243,7 +243,8 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 .ft_ci > span{display: inline-block;  text-indent: -9999px; background-image: url('../images/logo_w.png'); background-size: cover; width: 96px; height: 19px; opacity: 0.4;}
 
 .ft_bt{position: fixed; width: 100%; bottom: 0; left: 0; padding:12px; background: rgba(255,255,255,1); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%);}
-.ft_bt > .btn_box > button{line-height: 26px; max-width: 640px; margin: 0 auto;}
+.ft_bt > .btn_box{max-width: 640px; margin: 0 auto;}
+.ft_bt > .btn_box > button{line-height: 26px;}
 .ft_bt > .btn_box > button > .tit{display: block; font-size: 20px;}
 .ft_bt > .btn_box > button > .sub{font-size: 16px;}
 
@@ -379,5 +380,21 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     .mem_lst{width: 720px; margin: 0 auto;}
     .hsr_all{width: 768px; margin: 0 auto;}
     .mdf_pns > .pns_btn button.bsc{padding:12px;}
-    .mdf_pns > .pns_btn button.bsc_r{padding:12px;}
+    .mdf_pns > .pns_btn button.bsc_r{padding:12px;}    
 }
+
+
+/* slot machine animation */
+
+.slot_pop{display: none; position: absolute; width: 600px; height: 300px; background-color: #fff; left: 50%; top:50%; margin-left: -300px; margin-top: -150px; text-align: center; color: #000;}
+
+@keyframes vibration {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(-1deg);
+    }
+  }
+
+.ani_vib{animation: vibration 0.1s}

@@ -73,6 +73,11 @@
   </div>
 </div>
 
+<div class="slot_pop">
+  <span><span class="slt_num"></span>번 당첨</span>
+  <span>김신한님 축하드립니다.</span>
+</div>
+
 <div class="slot_test">
   <div>
       <input type="text" class="slotNum1" value="1"/>
@@ -98,16 +103,31 @@
       var num2 = $('.slotNum2').val();
       var num3 = $('.slotNum3').val();
       var num4 = $('.slotNum4').val();
+
       $('.slotwrapper ul').playSpin({
           time      : 2000,
           loops     : 4,
-          endNum    : 5,
           endNum    : [num1, num2, num3, num4],
+          onEnd : function(num){
+            $('body').addClass('ani_vib');
+
+            setTimeout(function(){
+              $('body').removeClass('ani_vib');
+            },500)
+          },
           onFinish  : function(num){
-            alert(num +'번으로 슬롯완료');
+            $('.slt_num').text(num)
+            setTimeout(function(){
+              $('.slot_pop').show();
+            },500)            
           }
       });
+
+      $('.slot_pop').hide();
   });
 </script>
+<style>
+  html{overflow: hidden;}
+</style>
 
 </html>
