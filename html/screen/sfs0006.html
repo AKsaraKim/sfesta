@@ -20,6 +20,14 @@
 
 <div class="slotm">
   <div class="slot_box">
+    <div class="slot_bg">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <div class="slotwrapper">
       <ul>
           <li>1</li>
@@ -70,26 +78,33 @@
           <li>0</li>
       </ul>
     </div>
+    <div class="slot_fr">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="slot_pop">
-  <span><span class="slt_num"></span>번 당첨</span>
-  <span>김신한님 축하드립니다.</span>
+<div class="slot_pop">  
+  <span class="sl_lin_name"><span class="slt_name">박정범호</span>님 축하드립니다.</span>
 </div>
 
 <div class="slot_test">
   <div>
-      <input type="text" class="slotNum1" value="1"/>
+      <input type="text" class="slotNum1" value="9"/>
   </div>
   <div>
-      <input type="text" class="slotNum2" value="2"/>
+      <input type="text" class="slotNum2" value="8"/>
   </div>
   <div>
-      <input type="text" class="slotNum3" value="3"/>
+      <input type="text" class="slotNum3" value="9"/>
   </div>
   <div>
-      <input type="text" class="slotNum4" value="4"/>
+      <input type="text" class="slotNum4" value="8"/>
   </div>
 
   <button class="bsc_w slotStart">돌리기</button>    
@@ -102,7 +117,8 @@
       var num1 = $('.slotNum1').val();
       var num2 = $('.slotNum2').val();
       var num3 = $('.slotNum3').val();
-      var num4 = $('.slotNum4').val();
+      var num4 = $('.slotNum4').val();   
+      
 
       $('.slotwrapper ul').playSpin({
           time      : 2000,
@@ -113,17 +129,25 @@
 
             setTimeout(function(){
               $('body').removeClass('ani_vib');
-            },500)
+            },500);
+
           },
           onFinish  : function(num){
             $('.slt_num').text(num)
             setTimeout(function(){
-              $('.slot_pop').show();
-            },500)            
+              $('.slot_pop').addClass('show_ani');
+              setTimeout(function(){
+                $('.slot_pop').addClass('ani_htbt');
+              },500);              
+            },500);
+            
+            $('.slot_box').addClass('fns_loc');
           }
       });
 
-      $('.slot_pop').hide();
+      $('.slot_pop').removeClass('show_ani');
+      $('.slot_box').removeClass('fns_loc');
+      $('.slot_pop').removeClass('ani_htbt');
   });
 </script>
 <style>

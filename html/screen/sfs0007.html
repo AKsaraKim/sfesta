@@ -10,16 +10,31 @@
   <script type="text/javascript" src="../../resources/lib/jquery/jquery-3.6.4.min.js"></script>
   <script type="text/javascript" src="../../resources/lib/slotm/slotmachine.js"></script>
   <script type="text/javascript" src="../../resources/lib/easing/jquery.easing.js"></script>  
+  <script type="text/javascript" src="../../resources/lib/balloons/balloons.js"></script>  
+  <script type="text/javascript" src="../../resources/lib/flash/flash.js"></script>  
+  <script type="text/javascript" src="../../resources/lib/fireworks/fireworks.js"></script>  
   <script type="text/javascript" src="../../resources/js/interaction.js"></script>
 
 </head>
 <body>
-<div class="bg">
-  <canvas class="golddust_cvs" id="goldDust" width="100%" height="100%"></canvas>
+<div class="lv2bg"></div>
+
+<div class="fireworks">
+</div>
+
+<div class="balloon_container">
 </div>
 
 <div class="slotm">
-  <div class="slot_box">
+  <div class="slot_box golden">
+    <div class="slot_bg">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <div class="slotwrapper">
       <ul>
           <li>1</li>
@@ -70,21 +85,44 @@
           <li>0</li>
       </ul>
     </div>
+    <div class="slot_fr">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
   </div>
 </div>
 
+<div class="slot_pop golden">  
+  <span class="sl_lin_name"><span class="slt_name">박정범호</span>님 축하드립니다.</span>
+</div>
+
+<div class="bg">
+  <canvas class="golddust_cvs" id="goldDust" width="100%" height="100%"></canvas>
+</div> 
+
+<div class="lights">
+  <div class="light_b"></div>
+  <div class="light_s"></div>
+</div>
+
+<div class="flash"></div>
+
 <div class="slot_test">
   <div>
-      <input type="text" class="slotNum1" value="1"/>
+      <input type="text" class="slotNum1" value="9"/>
   </div>
   <div>
-      <input type="text" class="slotNum2" value="2"/>
+      <input type="text" class="slotNum2" value="8"/>
   </div>
   <div>
-      <input type="text" class="slotNum3" value="3"/>
+      <input type="text" class="slotNum3" value="9"/>
   </div>
   <div>
-      <input type="text" class="slotNum4" value="4"/>
+      <input type="text" class="slotNum4" value="8"/>
   </div>
 
   <button class="bsc_w slotStart">돌리기</button>    
@@ -97,17 +135,60 @@
       var num1 = $('.slotNum1').val();
       var num2 = $('.slotNum2').val();
       var num3 = $('.slotNum3').val();
-      var num4 = $('.slotNum4').val();
+      var num4 = $('.slotNum4').val();   
+      
+
       $('.slotwrapper ul').playSpin({
           time      : 2000,
           loops     : 4,
-          endNum    : 5,
           endNum    : [num1, num2, num3, num4],
+          onEnd : function(num){
+            $('body').addClass('ani_vib_b');
+
+            setTimeout(function(){
+              $('body').removeClass('ani_vib_b');
+            },500);
+            
+            flash();
+
+          },
           onFinish  : function(num){
-            alert(num +'번으로 슬롯완료');
+            $('.slt_num').text(num)
+            setTimeout(function(){
+              $('.slot_box').addClass('ani_htbt_s');
+              $('.slot_pop').addClass('show_ani');
+              setTimeout(function(){
+                $('.slot_pop').addClass('bgr_ani');
+              },500);              
+            },500);
+            
+            $('.slot_box').addClass('fns_loc');
+
+            createBalloons(30);
+
+            flash();
+
+            $('.fireworks').fireworks({
+              sound:false,// sound effect
+              opacity: 0.9,
+              width:'100%',
+              height:'100%'
+            });
+
+            $('.lights').addClass('on');
+
           }
       });
+
+      $('.slot_pop').removeClass('show_ani');
+      $('.slot_box').removeClass('fns_loc');
+      $('.slot_box').removeClass('ani_htbt_s');
+      $('.slot_pop').removeClass('bgr_ani');
+      $('.lights').removeClass('on');
   });
 </script>
+<style>
+  html{overflow: hidden;}
+</style>
 
 </html>

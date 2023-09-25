@@ -69,7 +69,7 @@ var slotMachine = function (el, options, track) {
         manualStop: false,      // Boolean: spin until user manually click to stop
         stopSeq: 'leftToRight',      // String: sequence of slot machine end animation, random, leftToRight, rightToLeft
         endNum: 0,              // Number: animation end at which number/ sequence of list
-        onEnd : $.noop,         // Function: run on each element spin end, it is passed endNum
+        onEnd : $.noop,         // Function: run on each element   spin end, it is passed endNum
         onFinish: $.noop        // Function: run on all element spin end, it is passed endNum
     };
 

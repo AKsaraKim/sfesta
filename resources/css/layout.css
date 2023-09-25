@@ -335,10 +335,28 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 /* slot machine */
 
-.slotm{position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; }
-.slotm::before{content: ''; display: block; flex: 1;}
-.slotm::after{content: ''; display: block; flex: 1;}
-.slot_box{width: 70%; margin: 0 auto;}
+.slotm{position: relative; width: 100%; height: 100%; }
+.slot_box{position: absolute; width: 900px; height: 200px; top: calc(50% - 100px); left: calc(50% - 450px); transition: all 0.5s;}
+.slot_box.fns_loc{top: calc(50% - 300px)}
+.slot_bg{display: block; position: absolute; width: 100%; height: 100%; top:0; left: 0; }
+.slot_bg > ul{display: block; position: absolute; width: 100%; height: 100%; top:0; left: 0; }
+.slot_bg > ul > li{display: block; position: absolute; width: 25%; height: 100%; top:0; }
+.slot_bg > ul > li:nth-child(1){left: 0;}
+.slot_bg > ul > li:nth-child(2){left: 25%;}
+.slot_bg > ul > li:nth-child(3){left: 50%;}
+.slot_bg > ul > li:nth-child(4){left: 75%;}
+.slot_bg > ul > li::before{content: ''; position: absolute; width: 80%; left: 50%; margin-left: -40%; height: 100%; top:0; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(33,33,33,0.9) 44%, rgba(0,0,0,0.9) 100%); box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22);}
+.slot_fr{display: block; position: absolute; width: 100%; height: 100%; top:0; left: 0; }
+.slot_fr > ul{display: block; position: absolute; width: 100%; height: 100%; top:0; left: 0; }
+.slot_fr > ul > li{display: block; position: absolute; width: 25%; height: 100%; top:0; }
+.slot_fr > ul > li:nth-child(1){left: 0;}
+.slot_fr > ul > li:nth-child(2){left: 25%;}
+.slot_fr > ul > li:nth-child(3){left: 50%;}
+.slot_fr > ul > li:nth-child(4){left: 75%;}
+.slot_fr > ul > li::before{content: ''; position: absolute; width: 80%; left: 50%; margin-left: -40%; height: 100%; top:0; border: 10px solid transparent; 
+    border-image: linear-gradient(0deg, rgba(159,159,159,1) 0%, rgba(198,198,198,1) 27%, rgba(238,238,238,1) 33%, rgba(171,171,171,1) 44%, rgba(97,97,97,1) 80%, rgba(125,125,125,1) 94%); 
+    border-image-slice: 1; border-radius: 20px;
+}
 
 .slot_test{position: absolute; width: 300px; display: flex; bottom: 10px; left: 50%; margin-left: -150px;}
 
@@ -348,25 +366,118 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     display: block;
     height: 200px;
 }
-.slotwrapper ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    float: left;
-    width: 25%;
-    height:200px;
-    font-size: 200px;
-    line-height: 200px;
-    text-align: center;
-}
+.slotwrapper ul {padding: 0; margin: 0; list-style: none; position: relative; float: left; width: 25%; height:200px; font-size: 150px; line-height: 200px; text-align: center;}
 
 .slotwrapper li {color: #fff;}
+
+.slot_pop{opacity: 0; position: absolute; width: 900px; height: 300px; left: calc(50% - 450px); top:calc(50% - 0px); text-align: center; color: #fff; font-size:80px; transition: all 0.3s; transform: scale(6.0);}
+.slot_pop.show_ani{opacity: 1; transform: scale( 1.0 );}
+.slot_pop.bgr_ani{transform: scale( 1.4 );}
+.slot_pop > .sl_lin_num{display: block;}
+.slot_pop > .sl_lin_name{display: block;}
+
+
+.slot_box.golden .slot_fr > ul > li::before{
+    top:0; border: 15px solid transparent;
+    border-image: linear-gradient(180deg, rgba(209,180,100,1) 0%, rgba(0,0,0,0.9) 10%, rgba(170,162,50,1) 15%, rgba(226,212,38,1) 26%, rgba(255,249,165,1) 35%, rgba(255,246,125,1) 48%, rgba(215,200,34,1) 68%, rgba(67,52,19,1) 82%, rgba(21,18,10,1) 92%, rgba(129,122,20,1) 97%);
+    border-image-slice: 1;
+}
+.slot_box.golden .slotwrapper li {
+    background: linear-gradient(180deg, rgba(209,180,100,1) 0%, rgba(0,0,0,0.9) 10%, rgba(170,162,50,1) 15%, rgba(226,212,38,1) 26%, rgba(255,249,165,1) 35%, rgba(255,246,125,1) 48%, rgba(215,200,34,1) 68%, rgba(67,52,19,1) 82%, rgba(21,18,10,1) 92%, rgba(129,122,20,1) 97%);
+    color: transparent; -webkit-background-clip: text;
+}
+
+.slot_pop.golden{
+    background: linear-gradient(180deg, rgba(209,180,100,1) 0%, rgba(170,162,50,1) 15%, rgba(226,212,38,1) 26%, rgba(255,249,165,1) 35%, rgba(255,246,125,1) 48%, rgba(215,200,34,1) 68%, rgba(67,52,19,1) 82%, rgba(21,18,10,1) 92%, rgba(129,122,20,1) 97%);
+    color: transparent; -webkit-background-clip: text;
+    font-family: OneShinhanB;
+    letter-spacing: -0.3rem;
+}
 
 /* bg */
 
 .bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; z-index: 0;}
 .golddust_cvs{pointer-events:none;}
+.lv2bg{position: fixed; width: 100%; height: 100%; top:0; left: 0; z-index: 0; background: radial-gradient(circle, rgba(124,7,30,1) 0%, rgba(22,1,6,1) 100%);}
+.flash{display: none; position: fixed; width: 100%; height: 100%; top:0; left: 0; background: #fff;}
+.fireworks{position: fixed; width: 100%; height: 100%; top:0; left: 0;}
+.lights{position: fixed; width: 100%; height: 100%; top:0; left: 0; opacity: 0;}
+.lights.on{opacity: 1;}
+
+
+
+
+/* lights */
+.lights .light_b{opacity: 0.6; position: absolute; width: 2048px; height: 2048px;bottom:-1024px; left: -1024px;  background-image: url(../images/radial.svg); background-size: cover; animation: rotation 4s infinite; animation-timing-function: linear; }
+.lights .light_s{opacity: 0.8; position: absolute; width: 1024px; height: 1024px;top:-512px; right: -512px;  background-image: url(../images/radial.svg); background-size: cover; animation: rotation_r 3s infinite; animation-timing-function: linear; }
+
+@keyframes rotation{    
+    100% {
+      transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotation_r{    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* balloons */
+  
+  .balloon_container {
+    position: absolute;
+    width: 100%; height: 100%; top:0; left: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+  }
+  
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  
+  .balloon .highlight{position: absolute; display: block; width: 30px; height: 30px; right: 20px; top:20px; border-radius: 30px; background-color: rgba(255,255,255,0.6)}
+
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
 
 
 /* PC & tablet size */
@@ -386,7 +497,8 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
 
 /* slot machine animation */
 
-.slot_pop{display: none; position: absolute; width: 600px; height: 300px; background-color: #fff; left: 50%; top:50%; margin-left: -300px; margin-top: -150px; text-align: center; color: #000;}
+
+
 
 @keyframes vibration {
     from {
@@ -397,4 +509,36 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     }
   }
 
+  @keyframes vibration_b {
+    from {
+      transform: rotate(2deg);
+    }
+    to {
+      transform: rotate(-2deg);
+    }
+  }
+
 .ani_vib{animation: vibration 0.1s}
+
+.ani_vib_b{animation: vibration 0.05s}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes heartbeat_s {
+from {
+    transform: scale(1);
+}
+to {
+    transform: scale(1.05);
+}
+}
+
+.ani_htbt{animation: heartbeat 0.4s infinite alternate}
+.ani_htbt_s{animation: heartbeat 0.6s infinite alternate}
