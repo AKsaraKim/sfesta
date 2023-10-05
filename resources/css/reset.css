@@ -6,18 +6,28 @@
 
 @font-face {
   font-family: OneShinhanL; font-weight: normal; font-style: normal;
-  src: url('../fonts/OneShinhanLight.ttf') format('truetype');
+  src: url('../fonts/OneShinhanLight.eot');
+  src: url('../fonts/OneShinhanLight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OneShinhanLight.woff') format('woff'),
+       url('../fonts/OneShinhanLight.ttf') format('truetype');
 }
 
 @font-face {
   font-family: OneShinhanM; font-weight: normal; font-style: normal;
-  src: url('../fonts/OneShinhanMedium.ttf') format('truetype');
+  src: url('../fonts/OneShinhanMedium.eot');
+  src: url('../fonts/OneShinhanMedium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OneShinhanMedium.woff') format('woff'),
+       url('../fonts/OneShinhanMedium.ttf') format('truetype');
 }
 
 @font-face {
   font-family: OneShinhanB; font-weight: normal; font-style: normal;
-  src: url('../fonts/OneShinhanBold.ttf') format('truetype');
+  src: url('../fonts/OneShinhanBold.eot');
+  src: url('../fonts/OneShinhanBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OneShinhanBold.woff') format('woff'),
+       url('../fonts/OneShinhanBold.ttf') format('truetype');
 }
+
 
 *,
 *::before,
