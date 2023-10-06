@@ -387,12 +387,7 @@ table.sft .cnt_num{text-align: right; padding:0 4px}
     color: transparent; -webkit-background-clip: text;
 }
 
-.slot_pop.golden{
-    background: linear-gradient(180deg, rgba(209,180,100,1) 0%, rgba(170,162,50,1) 15%, rgba(226,212,38,1) 26%, rgba(255,249,165,1) 35%, rgba(255,246,125,1) 48%, rgba(215,200,34,1) 68%, rgba(67,52,19,1) 82%, rgba(21,18,10,1) 92%, rgba(129,122,20,1) 97%);
-    color: transparent; -webkit-background-clip: text;
-    font-family: OneShinhanB;
-    letter-spacing: -0.3rem;
-}
+.slot_pop.golden{color: #cfc32a; text-shadow: 0 14px 28px rgba(0,0,0,.6); font-family: OneShinhanB; letter-spacing: -0.3rem;}
 
 /* bg */
 

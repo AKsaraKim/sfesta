@@ -1,5 +1,3 @@
-
-
 function flash(){
     $('.flash')
      .show()  //show the hidden div
